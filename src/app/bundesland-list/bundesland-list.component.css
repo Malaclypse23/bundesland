@@ -1,0 +1,57 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+    
+ul#persons li:empty {
+    display: none;
+}
+  
+ul#persons li {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: #ddd;
+}
+  
+ul#states li {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 10px solid #dddddd;
+    box-sizing: border-box;
+}
+
+ul#states li:hover,
+ul#states li.active {
+    border: 10px solid #000000;
+}
+
+@media screen and (min-width: 500px) {
+    ul#states li {
+        width: calc(50% - 5px);
+    }
+
+    ul#states li:nth-child(2n + 2) {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    ul#states li {
+        width: calc(33.3% - 7px);
+    }
+
+    ul#states li:nth-child(2n + 2) {
+        margin-left: 0;
+    }
+
+    ul#states li:nth-child(3n + 2) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

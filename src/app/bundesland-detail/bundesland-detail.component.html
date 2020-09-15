@@ -1,0 +1,9 @@
+<div *ngIf="selectedState">
+    <h4>{{ selectedState.name }}</h4>
+    <div>Schulen: {{ selectedState.schoolCount }}</div>
+    <div>URL: {{ selectedState.url }}</div>
+    <div>Stadtstaat: {{ selectedState.stadtStaat }}</div>
+    <div>Buchstabe {{ selectedState.letter }}</div>
+</div>
+
+<a href="" [routerLink]="['/']" routerLinkActive="active">Back to List</a>

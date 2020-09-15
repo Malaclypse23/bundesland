@@ -1,0 +1,9 @@
+<a href="" [routerLink]="['', bundesland.url]" routerLinkActive="active">
+    <div *ngIf="bundesland.stadtStaat; else notBold">
+        <b>{{ bundesland.name }}</b>
+    </div>
+    <ng-template #notBold>
+        <div>{{ bundesland.name }}</div>
+    </ng-template>
+    <small>{{ bundesland.schoolCount }} Schulen</small>
+</a>

@@ -1,0 +1,18 @@
+:host {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 10px solid #dddddd;
+    box-sizing: border-box;
+    width: calc(33.3% - 7px);
+}
+
+h4 {
+    margin: 0;
+}
+
+a {
+    display: block;
+    margin-top: 1em;
+}

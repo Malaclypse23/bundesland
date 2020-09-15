@@ -1,0 +1,12 @@
+<ul id="states">
+    <li *ngFor="let state of states" [class.active]="state === selectedState">
+        <app-bundesland (click)="loadState(state.url)" [bundesland]="state"></app-bundesland>
+    </li>
+</ul>
+
+<ul id="persons">
+    <li *ngFor="let letter of letters | keyvalue">
+        <app-buchstabe *ngIf="letter.value > 0" [letter]="letter.key"></app-buchstabe>
+    </li>
+</ul>
+  
