@@ -1,16 +1,19 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 import { BundeslandComponent } from './bundesland.component';
+import { By } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DebugElement } from '@angular/core';
 
 describe('BundeslandComponent', () => {
   let component: BundeslandComponent;
   let fixture: ComponentFixture<BundeslandComponent>;
-  // const hostElement: DebugElement;
+  let bundeslandElement: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BundeslandComponent ]
+      declarations: [BundeslandComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
@@ -18,6 +21,7 @@ describe('BundeslandComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BundeslandComponent);
     component = fixture.componentInstance;
+    bundeslandElement = fixture.debugElement.query(By.css('a'));
     fixture.detectChanges();
   });
 
@@ -25,18 +29,15 @@ describe('BundeslandComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  /*
-  it('should not display the card-element when the input is null', () => {
-    component.name$ = null;
+  it('should not display the letter-element when the input is null', () => {
+    component.bundesland = null;
     fixture.detectChanges();
-    expect(cardElement).toBeFalsy();
+    expect(bundeslandElement).toBeFalsy();
   });
 
-  it('should display the card-element when the input is defined', () => {
-    const luke = { name: 'Luke Skywalker' };
-    component.characterDetails$ = of(luke);
+  it('should display the bundesland-link when input is defined', () => {
+    component.bundesland = { name: 'Bayern', foreignCountry: false, letter: 'B', schoolCount: 9020, stadtStaat: false, url: '/Bundesland/Bayern' };
     fixture.detectChanges();
-    expect(cardElement).toBeDefined();
+    expect(bundeslandElement).toBeDefined();
   });
-  */
 });

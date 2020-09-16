@@ -6,7 +6,6 @@ import data from './bundesland.json';
   providedIn: 'root'
 })
 export class BundeslandService {
-
   data: any = data;
 
   public getStates(): Bundesland[] {

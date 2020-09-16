@@ -1,4 +1,4 @@
-<a href="" [routerLink]="['', bundesland.url]" routerLinkActive="active">
+<a *ngIf="bundesland" href="" [routerLink]="['', bundesland.url]" routerLinkActive="active">
     <div *ngIf="bundesland.stadtStaat; else notBold">
         <b>{{ bundesland.name }}</b>
     </div>

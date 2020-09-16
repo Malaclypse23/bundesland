@@ -9,7 +9,6 @@ import { BundeslandService } from '../bundesland.service';
   styleUrls: ['./bundesland-list.component.css']
 })
 export class BundeslandListComponent implements OnInit {
-
   states: Bundesland[] = [];
   letters: Map<string, number>;
   selectedState: Bundesland;
@@ -25,5 +24,4 @@ export class BundeslandListComponent implements OnInit {
   loadState(url: string): void {
     this.selectedState = this.dataService.getState(url);
   }
-
 }
